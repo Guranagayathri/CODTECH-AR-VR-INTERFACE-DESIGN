@@ -1,0 +1,348 @@
+/* YOUTUBE AR/VR INTERFACE DESIGN CODE*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Redesign</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF0000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .search-bar {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+}
+
+header .profile-icon img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 0;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background-color: #ddd;
+}
+
+.video-feed {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.50s;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-info {
+    padding: 10px;
+}
+
+video-info h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .video-feed {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        width: 100px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="YouTube Logo"> 
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search videos...">
+        </div>
+        <div class="profile-icon">
+            <img src="profile.jpg" alt="Profile Picture">
+        </div>
+    </header>
+
+    <main>
+        
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Subscriptions</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Your Videos</a></li>
+            </ul>
+        </aside>
+
+        
+        <section class="video-feed">
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/cof.avif">
+                    <source src="../../assets/viedeos/cof.mp4" type="video/mp4">
+                   
+                </video>
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Always Coffee</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+               
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/cou.jpg">
+                    <source src="../../assets/viedeos/couple.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            <div class="video-card">
+                
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/cra.webp">
+                    <source src="../../assets/viedeos/fir.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/bea.jpeg">
+                    <source src="../../assets/viedeos/bea.mp4" type="video/mp4">
+                </video>
+               
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 4 week ago</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/med.jpeg">
+                    <source src="../../assets/viedeos/med.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/car.jpg">
+                    <source src="../../assets/viedeos/car.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/eve.jpeg">
+                    <source src="../../assets/viedeos/mus.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/hor.jpeg">
+                    <source src="../../assets/viedeos/horr.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/res.avif">
+                    <source src="../../assets/viedeos/rest.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/are.webp">
+                    <source src="../../assets/viedeos/aero.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="../../assets/images/sno.jpg">
+                    <source src="../../assets/viedeos/snow.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="thumbnail.jpg">
+                    <source src="../../assets/viedeos/foot.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="thumbnail.jpg">
+                    <source src="../../assets/viedeos/dancing.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="thumbnail.jpg">
+                    <source src="../../assets/viedeos/funny.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="thumbnail.jpg">
+                    <source src="../../assets/viedeos/love.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <video width="640" height="360" controls autoplay loop muted poster="thumbnail.jpg">
+                    <source src="../../assets/viedeos/santa.mp4" type="video/mp4">
+                </video>
+            
+                <div class="video-info">
+                    <h4>Another Video Title</h4>
+                    <p>Channel Name</p>
+                    <p>Views • 1 week ago</p>
+                </div>
+            </div>
+            
+
+        </section>
+    </main>
+   
+
+    <script src="app.js"></script> 
+</body>
+</html>
